@@ -1,0 +1,760 @@
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #111;
+}
+
+/* Custom default button */
+/*
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none;
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+*/
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #fff;
+}
+body {
+  color: #111;
+  text-align: center;
+  padding-top: 20px;
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.container {
+    max-width: 600px;
+}
+
+.navbar {
+    background-color: transparent;
+    border-color: transparent;
+    background-color: #efefef;
+    box-shadow: 0px 0px 2px #111;
+    min-height: 0;
+}
+
+/*
+.navbar-fixed {
+    background-color: #fff;
+    border-color: transparent;
+    box-shadow: 0px 0px 2px #111;
+}
+*/
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #111;
+    margin: 0 2px;
+    font-size: 17px;
+    background-color: #fff;
+}
+
+.navbar-default .navbar-brand {
+    color: #000;
+    font-weight: bold;
+    height: auto;
+    line-height: 40px;
+    padding: 0 15px;
+}
+
+
+.navbar-inverse .navbar-nav > li > a:hover {
+
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+
+}
+
+.navbar-nav > li > a {
+    line-height: 40px;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: auto;
+}
+
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+
+/*
+ * Header
+ */
+.masthead-brand {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.masthead-nav > li {
+  display: inline-block;
+}
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+.masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 20px;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+
+/*
+ * Footer
+ */
+
+.mastfoot {
+  color: #999; /* IE8 proofing */
+  color: rgba(255,255,255,.5);
+}
+
+
+
+
+/* SONG LIST */
+
+.song-list {
+    max-width: 500px;
+    margin: 20px auto 20px auto;
+}
+
+.song-item {
+    color: #fff;
+    background-color: #555;
+    margin: 5px 1px;
+    box-shadow: 0px 0px 2px #111;
+    transition: background-color 0.5s ease;
+    display: block;
+}
+
+.song-item:hover {
+    background-color: #666;
+
+}
+
+.song-cover {
+    width: 80px;
+    float: left;
+    padding: 10px;
+}
+
+.song-conver img {
+    width: 100%;
+    height: 100%;
+}
+
+.song-content {
+    float: left;
+    padding: 15px 10px 10px 0px;
+    text-align: left;
+}
+
+.song-title {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    display: inline-block;
+    border-bottom: 1px solid #fff;
+}
+
+.song-artist {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #eee;
+}
+
+.song-play {
+    float: right;
+    width: 80px;
+    text-align: center;
+    padding: 10px;
+}
+
+.song-play i {
+    font-size: 55px;
+    line-height: 60px;
+}
+
+/* SONG LIST END */
+
+
+/* REVIEW */
+
+.review-intro {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.review-intro-cover {
+    position: relative;
+}
+
+.review-intro-cover a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.review-intro-cover a:hover {
+
+}
+
+
+.review-intro-cover a i {
+    font-size: 100px;
+    height: 100px;
+    width: 100px;
+    top: 50%;
+    margin-top: -50px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.review-intro-cover img {
+    max-height: 400px;
+    width: auto;
+}
+
+.review-intor-info {
+
+}
+
+.review-intor-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.review-intor-info li {
+    text-align: left;
+    line-height: 24px;
+}
+
+
+.review-stars {
+}
+
+.review-stars span {
+    font-size: 30px;
+    color: yellow;
+}
+
+.review-stars .fa-star {
+    
+}
+
+.review-stars .fa-star-o {
+
+}
+
+.star-value {
+    width: 30px;
+    display: inline-block;
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.review-consideration {
+    font-size: 30px;
+    color: #fff;
+    padding: 20px 20px 20px 20px;
+    background: green;
+    border-radius: 5px;
+}
+
+.review-consideration-success {
+    background-color: green;
+    color: #fff;
+}
+
+.review-list-head {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 40px 0 10px 0;
+}
+
+
+.review-list {
+    max-width: 580px;
+    margin: 0 auto;
+}
+
+.review-item {
+    padding-bottom: 20px;
+}
+
+.review-item img, .review-item iframe {
+    width: 100%;
+    height: auto;
+}
+
+.review-video {
+    background-color: #efefef;
+    padding: 10px;
+}
+
+.review-details {
+    padding-right: 10px;
+    text-align: right;
+    line-height: 20px;
+    color: #888;
+}
+
+
+.review-intro-info {
+    padding: 20px 0px;
+}
+
+.review-intro-item-wrapper {
+    padding: 20px 0;
+}
+
+.review-intro-item-head {
+    height: 1px;
+    background-color: #ccc;
+    position: relative;
+    color: #999;
+    cursor: pointer;
+    display: block;
+}
+
+.review-intro-item-head:hover, .review-intro-item-head:focus {
+    color: #000;
+} 
+
+.review-intro-item-head p {
+    position: absolute;
+    width: 100px;
+    line-height: 30px;
+    height: 30px;
+    background-color: #fff;
+    left: 50%;
+    margin-left: -50px;
+    top: -15px;
+}
+
+.review-intro-item-content {
+    display: none;
+}
+
+.review-intro-item-content {
+    text-align: left;
+    padding: 30px;
+
+}
+
+.review-intro-item-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.review-intro-item-content li {
+    line-height: 30px;
+}
+
+.movie-details {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.movie-image {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.movie-image img {
+    width: 100%;
+    height: auto;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
+    max-width: 220px;
+}
+
+.movie-content {
+    padding: 10px;
+}
+
+.movie-title {
+    font-size: 20px;
+    color: #000;
+}
+
+.movie-year {
+    color: #999;
+    font-size: 14px;
+}
+
+.movie-short-description {
+    padding: 10px 0;
+}
+
+.movie-more {
+    padding: 10px 0px 0px 0px;
+    border-top: 1px solid #efefef;
+    text-align: right;
+    color: #999;
+    font-style: 14px;
+    cursor: pointer;
+}
+
+.move-more-content {
+    display: none;
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px solid #efefef;
+}
+
+.rating-details {
+    background-color: green;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.movie-rating {
+    padding: 0px 0px;
+}
+
+.movie-rating p {
+    color: #fff;
+    padding: 10px 0px 0px 0px;
+    margin: 0;
+}
+
+.movie-rating-global.movie-stars span {
+    font-size: 20px;
+    color: yellow;
+}
+
+
+
+.movie-stars {
+    text-align: center;
+}
+
+.movie-stars span {
+    font-size: 30px;
+    color: yellow;
+}
+
+.star-value {
+
+}
+
+.movie-stars-text {
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0 10px 0;
+}
+
+.movie-show {
+    margin-top: 20px;
+    background-color: #efefef;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+    display: block;
+    border: 1px solid #efefef;
+}
+
+.movie-show:hover {
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+}
+
+.movie-trailer {
+    margin-top: 20px;
+    /*
+    padding-bottom: 111px;
+    */
+    
+}
+
+.move-trailer-iframe {
+    display: none;
+}
+
+.movie-trailer a {
+    background-color: #efefef;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+    display: block;
+    border: 1px solid #efefef;
+}
+
+.movie-trailer a:hover {
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+}
+
+
+.movie-similar {
+    margin-top: 20px;
+    background-color: #efefef;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+    display: block;
+    border: 1px solid #efefef;
+    text-decoration: none !important;
+}
+
+.movie-similar:hover, .movie-similar:focus {
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+}
+
+.similar-movie {
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    position: relative;
+    display: block;
+    margin-top: 20px;
+}
+
+.similar-movie-image {
+  height: 183px;
+}
+
+.similar-movie-image img {
+    width: 100%;
+    height: auto;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.similar-movie-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.similar-movie:hover .similar-movie-text {
+
+}
+
+
+.similar-movie-name {
+    padding: 5px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.similar-movie-rating {
+    padding: 4px 10px 4px 10px;
+    border-top: 1px solid #efefef;
+}
+
+.similar-movie-rating span {
+    color: yellow;
+    font-size: 13px;
+    width: auto;
+}
+
+.similar-movie-rating .star-value {
+    color: #000 !important;
+}
+
+.similar-movie-list {
+    display: none;
+    padding: 0px 0px 30px 0;
+}
+
+.search-movie-list {
+    display: none;
+    padding: 0px 0px 30px 0;
+}
+
+/*
+.similar-movie-wrapper a {
+    margin-top: -51px;
+}
+*/
+
+/* REVIEW END*/
+
+
+/* RATING */
+/*
+.symbol {
+  display: inline-block;
+  border-radius: 50%;
+  border: 5px double white;
+  width: 30px;
+  height: 30px;
+}
+
+.symbol-empty {
+  background-color: #ccc;
+}
+
+.symbol-filled {
+  background-color: black;
+}
+*/
+
+
+/* RATING END */
+
+
+.list-group-genres {
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.list-group-genres input {
+    float: right;
+}
+
+.list-group-item 
+
+
+.input-group-addon {
+  cursor: pointer;
+}
+
+#custom-search-input {
+  padding: 0 0 20px 0;
+}
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+
+  .site-wrapper-inner2 {
+    padding-top: 80px;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 992px) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 700px;
+  }
+}

@@ -1,0 +1,93 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/pure/base.css">
+	<link rel="stylesheet" href="css/pure/forms.css">
+	<link rel="stylesheet" href="css/pure/buttons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>
+        var files;
+        // Add events
+        $('input[type=file]').on('change', prepareUpload);
+
+        // Grab the files and set them to our variable
+        function prepareUpload(event)
+        {
+          files = event.target.files;
+        }
+   		$('#form').on('submit', uploadFiles);
+        // Catch the form submit and upload the files
+        function uploadFiles(event)
+        {
+            // Create a formdata object and add the files
+            var data = new FormData();
+            $.each(files, function(key, value)
+            {
+                data.append(key, value);
+            });
+            data.append('merch_id', 1);
+            data.append('shop_id' , 2);
+            data.append('name', 1);
+            data.append('percent', $('#discount').val());
+            data.append('merch_id', 1);
+            data.append('description', "Hot Off");
+            data.append('end_time', "1445205142");
+            jsonData = JSON.stringify(data);
+            $.ajax({
+                url: '/upload_file',
+                type: 'POST',
+                data: jsonData,
+                cache: false,
+                dataType: 'json',
+                processData: false, // Don't process the files
+                contentType: "application/json; charset=utf-8", // Set content type to false as jQuery will tell the server its a query string request
+                success: function(response){
+                    console.log(response);
+                    
+                },
+                error: function(error){
+                    console.log(error);
+                },
+            });
+        }
+	</script> 
+</head>
+
+<body>
+    <form id = "form" >
+        <fieldset id="center">
+            <legend>Add a new offer</legend>
+
+            <div class="pure-control-group">
+            	<label for="item">Item</label>
+            	<input id="item" type="text" placeholder="Watch">
+            </div>
+
+            <div class="pure-control-group">
+            	<label for="init_price">Initial price [E]:</label>
+            	<input id="init_price" type="text" placeholder="120">
+            </div>
+
+            <div class="pure-control-group">
+            	<label for="discount">Discount [%]:</label>
+            	<input id="discount" type="text" placeholder="20">
+            </div>
+
+            <div class="pure-control-group">
+            	<label for="exp">Offer expires [hours from now]:</label>
+            	<input id="exp" type="text" placeholder="3">
+            </div>
+
+            <div class="pure-control-group">
+            	<button type="submit" class="pure-button pure-button-primary">Submit</button>
+            	<input type="file" id="fileInput" class="pure-button pure-button-active" name="fileInput" />
+       
+            </div>
+        </fieldset>
+
+    </form>
+</body>
+</html>
+
