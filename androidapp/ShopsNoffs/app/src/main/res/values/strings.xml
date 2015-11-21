@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">SHOPSNOFFS</string>
+    <string name="action_settings">Settings</string>
+
+    <array name="suggestions">
+        <item>Shoes</item>
+        <item>Liquor</item>
+        <item>Bread</item>
+        <item>Fruits</item>
+        <item>Gallery</item>
+        <item>Gift</item>
+        <item>Gamble</item>
+        <item>Garden</item>
+        <item>Guitar</item>
+        <item>Gin</item>
+    </array>
+</resources>
